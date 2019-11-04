@@ -1,0 +1,126 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size: 1em;
+    text-align: center;
+    line-height:2em; }
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    color: black;
+    font-size:1em;
+    text-align:center;
+
+}
+.header{
+    width: 100%;
+    height:18em;
+    background-image: linear-gradient(90deg,cornflowerblue, rgb(2, 2, 133)); 
+    border: 1px solid black
+}
+.main-wrapper{
+display:grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: 1fr ;
+grid-gap:10px;
+box-sizing: border-box;
+border-radius: 5px;
+margin-top:10px;
+margin-bottom:10px;
+width:100%; 
+ height:80em;
+border:2px solid black;
+padding:10px;
+}
+/*Navigation*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+/*    */
+.first-section{
+    background-color: #B8336A;
+    border-radius: 5px;
+}
+
+.second-section{
+    background-color: #A0D2DB;
+    border-radius: 5px;
+}
+.third-section{
+    background-color: #C490D1;
+    border-radius: 5px;
+}
+input {
+   width:30em;
+   height:3em;
+   border:0px  black;
+   border-style: ridge;
+   border-radius:5px;
+}
+.search-button{
+    width: 4.5em;
+    height: 3em;
+    border-radius: 5px; 
+    background: url(../img/search.jpg)repeat;  
+    font-weight: bold;
+}
+.footer{
+width: 100%;
+height:18em;
+color: white;
+background: #111;
+}
