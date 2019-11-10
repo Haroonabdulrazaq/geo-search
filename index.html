@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+ <link rel="stylesheet" href="file:///C:/Users/Haroon%20Abdulrazaq/Desktop/geo-search/css/fontawesome-free-5.11.2-web/css/all.css">
     <title>Geo-search</title>
 </head>
 <body>
     <header>
         <div class="header">  
-                <img src="img/search-logo.png" alt="seach-logo" class="logo-img" title="Search-logo"><h1>Geo-Search</h1>
+                <img src="img/search-logo.png" alt="search-logo" class="logo-img" title="Search-logo"><h1>Geo-Search</h1>
         </div>
     </header>
-    <main>
+    <main> 
+        <section class="map-section">
+           <div class="map" id="map"></div>
+        </section>
         <div class="main-wrapper">
-            <section class="first-section">
-                <h3>Map marker</h3>
-            </section>
-            <section class="second-section">
-                <h3>Search input</h3>
+           
+            <section class="search-section">
+            
                 <form action=""id="form"> 
                     <label for="input"></label> 
                     <input type="text" class="search-input" id="input" placeholder="Enter a location" autocomplete="true" >
@@ -29,21 +31,31 @@
                 </form>  
                 <div class="pop-up">
                     <div class="weather">
-                        <div class="Temperature">Temperarture</div>
-                        <div class="wind-speed">Wind Speed</div>
-                        <div class="Humidity">Humidity</div>
-                        <div class="current-weather">Current weather condition</div>  
+                        <div class="Temperature current-weather">
+                            <i class="fa fa-thermometer" title="Temperature"></i> <hr>Temperature   
+                        </div>
+                        <div class="wind-speed current-weather">
+                            <i class="fas fa-wind" title="Wind speed"></i> <hr>Wind Speed
+                        </div>
+                        <div class="Humidity current-weather">
+                            <i class="fa fa-cloud-rain" title="Humidity" ></i>  <hr>Humidity
+                        </div>
+                        <div class="precipitation current-weather">
+                            <i class="fas fa-snowflake" title="Precipitation"></i><hr> Precipitation</div>  
                    </div>
                 </div>
             </section>
-         <!--  <section class="third-section">
+         <!--  <section class="notable-landmark">
                 <h3>Local weather condition</h3>
-            </section>-->
+            </section>cloud-rain   Dodgerblue-->
             
         </div>
     </main>
     
    <footer class="footer">footer</footer> 
    <script src="js/script.js"></script>
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnkEl_UehdS23iDfq3rjdWyvvSuAnKhv8&callback=initMap">
+   </script>
 </body>
 </html>
