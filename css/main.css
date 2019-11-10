@@ -21,6 +21,8 @@ body{
     border-radius: 0px 0px 5px 5px;
     box-shadow: 2px 2px 15px whitesmoke;
     font-family: 'Lobster', cursive;
+ 
+   
 }
 
 h1{
@@ -30,6 +32,7 @@ h1{
     color: white;
     margin: 0px auto;
     box-sizing: border-box;
+   
 }
 .logo-img{
 float: left;
@@ -118,11 +121,6 @@ font-weight: lighter;
     display:none;
 }
 
-/* .third-section{
-    background-color: #C490D1;
-    border-radius: 5px;
-} */
-
 input {
    width:30em;
    height:3em;
@@ -130,9 +128,9 @@ input {
    border-style: ridge;
    border-radius:5px;
    text-align: center;
-   font-size: 1em;
-   
+   font-size: 1em; 
 }
+
 input[placeholder]{
     font-family: 'Supermercado One', cursive;
     outline-color: cornflowerblue;
@@ -173,6 +171,7 @@ box-shadow:2px 2px 6px cornflowerblue;
     transition: 1s;
     transition-timing-function: linear;
     transform: scale(1.05);
+    cursor: pointer;
 
 }
 
@@ -182,7 +181,15 @@ i{
    font-size:48px;
 }
 
+.fa-facebook-square:hover{
+    transition: 0.8s;
+    transform: scale(1.05);
+}
 
+.facebook:hover{
+    opacity: 0.7;
+    color:white;
+  }
 
 .footer{
 width:100%;

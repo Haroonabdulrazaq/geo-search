@@ -24,12 +24,6 @@ function initMap(){
 
 };
 
-
-
-
-
-
-
 //Add Event Listener
 searchButton.addEventListener('click',($event)=>{
     $event.preventDefault();
