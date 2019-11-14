@@ -139,15 +139,15 @@ input[placeholder]{
     border-radius:7px; 
     background: #111;
     border:1px solid cornflowerblue; 
-background: url(../img/search.jpg)repeat;  
+    background: cornflowerblue;  
     font-weight: bold;
-    color:black;
+    color:white;
     font-size: 1em;
    
 }
 .search-button:hover{
     background: cornflowerblue;
-    color:white;
+    opacity: 0.7;
     box-shadow:2px 1px 5px #fbfbff;
 }
 .errorMessage{
@@ -188,7 +188,7 @@ i{
     height: 17px;
     float: right;
   }
-  .Celcius{
+  .Celsius{
       float: left;
   }
   
@@ -205,7 +205,7 @@ i{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color:#ccc;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -259,7 +259,34 @@ i{
     color:white;
   }
   .notable-landmark{
-
+    color: white;
+    /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+  .notable-landmark h3{
+      font-weight: bolder;
+      font-size: 2em;
+      margin:50px;
+      font-family:monospace;
+  }
+  .image-container{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 5px;
+      width: 100%;
+      height: fit-content;
+      margin:5px auto;
+      box-sizing:border-box;
+    
+  }
+  
+  .image-slider{
+        width:100%;
+        height:400px;
+  }
+  
+  .image-slider{
+      display:none;
   }
 
 .footer{
@@ -287,7 +314,8 @@ i{
         font-family: 'Supermercado One', cursive;
     }
     .footer a:hover{
-        color: white;  
+        color: white; 
+        transition: 0.8s; 
     }
    .footer h3{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -305,11 +333,13 @@ i{
     }
     .footer-3 i{
         font-size: 48px;
+        color: #aaa;
     }
-    .footer-3:hover{
-        opacity:0.7;
-        transition: .2s;
-    }
+    .footer-3 i:hover{
+        color: #fff;
+        transition: 0.8s;
+        }
+    
     .footer-4{
         grid-column: 1/4;
         margin:auto auto;
@@ -353,12 +383,13 @@ input {
  .search-button{
     width: 4.5em;
     height: 3em;
-    border-radius:7px; 
+    border-radius:5px; 
     border:1px solid cornflowerblue; 
-    background: url(../img/search.jpg)repeat;  
+    background: cornflowerblue;  
     font-weight: bold;
-    color:black;
+    color:white;
     font-size: 1em;
+    padding-right:5px; 
     margin-top:0.5em;
     box-sizing: border-box;
 }
@@ -440,12 +471,12 @@ input {
  .search-button{
     width: 4em;
     height: 3em;
-    border-radius:7px; 
-    background: #111;
+    border-radius:5px; 
     border:1px solid cornflowerblue; 
-    background: url(../img/search.jpg)repeat;  
+    background:cornflowerblue;
     font-weight: bold;
-    color:black;
+    padding-right: 5px;
+    color:white;
     font-size: 0.7em;
 }
 .errorMessage{
@@ -480,6 +511,9 @@ input {
     position: relative;
     width: 100%;
    
+}
+.footer h3{
+    font-size: 0.9em;
 }
 
 }
