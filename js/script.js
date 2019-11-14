@@ -1,4 +1,4 @@
-//API KEY : AIzaSyDnkEl_UehdS23iDfq3rjdWyvvSuAnKhv8
+
 //Getting Element from the DOM
 let searchButton = document.querySelector('#searchButton');
 let map = document.querySelector('#map');
@@ -7,6 +7,9 @@ let input = document.querySelector('#input');
 let loader = document.querySelector('.loader');
 let popUp = document.querySelector('.pop-up');
 let searchSection= document.querySelector('.search-section');
+let imageSlider = document.querySelector('.image-slider');
+let celsius = document.querySelector('.Celsius');
+let checkbox = document.querySelector('#checkbox');
 
 
 //Map with Customizable Marker
@@ -44,3 +47,33 @@ searchButton.addEventListener('click',($event)=>{
 
     }
 });
+
+//Toggle Temperature Units
+
+checkbox.addEventListener('change',($event)=>{
+
+  if(celsius.innerHTML == 'Celsius'){
+    celsius.innerHTML ="Fahrenheit";
+  }else{
+    celsius.innerHTML = "Celsius";
+  }
+});
+
+
+
+//Image Slider
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 5000); // Change image every 2 seconds
+}
