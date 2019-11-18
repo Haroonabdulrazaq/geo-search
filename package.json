@@ -1,0 +1,29 @@
+{
+  "name": "geo-search",
+  "version": "1.0.0",
+  "description": "A tool that allows users to search for places and extract information such as map, time-zone and local weather conditions",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haroonabdulrazaq/geo-search.git"
+  },
+  "author": "Haroon Abdulrazaq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haroonabdulrazaq/geo-search/issues"
+  },
+  "homepage": "https://github.com/Haroonabdulrazaq/geo-search#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.0.0"
+  }
+}
