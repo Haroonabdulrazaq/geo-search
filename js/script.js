@@ -10,7 +10,7 @@ let searchSection= document.querySelector('.search-section');
 let imageSlider = document.querySelector('.image-slider');
 let celsius = document.querySelector('.Celsius');
 let checkbox = document.querySelector('#checkbox');
-
+let overlay = document.querySelector('.overlay');
 
 
 
@@ -57,13 +57,31 @@ carousel();
 
 function carousel() {
   var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
+  var mySlides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < mySlides.length; i++) {
+    mySlides[i].style.display = "none";   
+}
+
+
+
   myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
+  if (myIndex > mySlides.length) {myIndex = 1}  
+ 
+      overlay.addEventListener('mouseover',()=>{
+        if(myIndex == 1){
+          overlay.innerHTML = 'Dubai UAE';
+        }
+        else if(myIndex == 2 ){
+          overlay.innerHTML = 'Eifel-Tower Paris';
+        }
+        else{
+          overlay.innerHTML = 'Golden Gate California';
+        }
+      overlay.classList.add('allow');
+    
+      });
+        
+  mySlides[myIndex-1].style.display = "block";  
   setTimeout(carousel, 4000); // Change image every 2 seconds
 }
 

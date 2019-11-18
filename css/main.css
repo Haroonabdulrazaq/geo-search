@@ -1,6 +1,8 @@
 *{ 
   line-height:2.5em;
-
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
  }
 
 
@@ -9,7 +11,7 @@ body{
     font-size:1em;
     text-align:center;
     background: url(../img/world-background.jpg)repeat-y;
-    font-family: 'Noto Serif', serif;
+    font-family:'Public Sans', sans-serif 'Noto Serif', serif;
 
 }
 .header{
@@ -19,8 +21,6 @@ body{
     background-image: linear-gradient(90deg,cornflowerblue, rgb(2, 2, 133)); 
     color: white;
     border-radius: 0px 0px 5px 5px;
-    box-shadow: 2px 2px 15px whitesmoke;
-    font-family: 'Lobster', cursive;
 }
 
 h1{
@@ -128,9 +128,9 @@ input {
    text-align: center;
    font-size: 1em; 
 }
-
+/* 'Supermercado One', cursive; */
 input[placeholder]{
-    font-family: 'Supermercado One', cursive;
+    font-family: ;
     outline-color: cornflowerblue;
 }
 .search-button{
@@ -163,7 +163,10 @@ background:white;
 color: black;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 font-weight: bold;
-box-shadow:2px 2px 6px cornflowerblue;  
+}
+.Temperature{
+    box-sizing: border-box;
+padding:0px 2px;
 }
 .current-weather:hover{
     font-style: italic;
@@ -277,17 +280,42 @@ i{
       height: fit-content;
       margin:5px auto;
       box-sizing:border-box;
-    
+     
+  }
+  .image-container{
+      position: relative;
+      box-sizing: border-box;
   }
   
   .image-slider{
         width:100%;
         height:400px;
   }
-  
-  .image-slider{
-      display:none;
+
+
+  .overlay{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 400px; 
+   color: white;
+   font-size: 0;
+   text-align: center;
+   transition: 1s ease;
+     
   }
+  .allow:hover{
+      display: block;
+      width: 100%;
+      height: 400px;
+      background:rgba(255, 255, 255, 0.5);
+      font-size:4em;
+     
+  }  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
 
 .footer{
     width:100%;
@@ -295,7 +323,6 @@ i{
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background:#111;
-    box-shadow: 2px -1px 5px whitesmoke;
     }
     .footer{
         display:grid;
