@@ -1,48 +1,90 @@
 
 //Getting Element from the DOM
-let searchButton = document.querySelector('#searchButton');
+const searchButton = document.querySelector('#searchButton');
 let map = document.querySelector('#map');
-let form = document.querySelector('#form');
-let input = document.querySelector('#input');
-let loader = document.querySelector('.loader');
-let popUp = document.querySelector('.pop-up');
-let searchSection= document.querySelector('.search-section');
-let imageSlider = document.querySelector('.image-slider');
-let celsius = document.querySelector('.Celsius');
-let checkbox = document.querySelector('#checkbox');
-let overlay = document.querySelector('.overlay');
+const form = document.querySelector('#form');
+const input = document.querySelector('#input');
+const loader = document.querySelector('.loader');
+const popUp = document.querySelector('.pop-up');
+const searchSection= document.querySelector('.search-section');
+const imageSlider = document.querySelector('.image-slider');
+const celsius = document.querySelector('.Celsius');
+const checkbox = document.querySelector('#checkbox');
+const overlay = document.querySelector('.overlay');
 
 
 
+// Make HTTP network Request to get local weather condition
+const apiRequest = new XMLHttpRequest();
+
+form.addEventListener('submit',($event)=>{
+  $event.preventDefault();  //Prevent Page Refresh
+  let inputValue = input.value;
+  apiRequest.open('GET','https://api.openweathermap.org/data/2.5/weather?q=' + inputValue + '&APPID=c845f0083c427e569e8d829e46019dbc' );
+  apiRequest.send();
 
 
-//Add Event Listener
-searchButton.addEventListener('click',($event)=>{
-    $event.preventDefault();
+ 
+ // RegEx to enforce/check user inputs
+  const pattern =/[a-zA-Z]/ig;
 
-    const pattern =/[a-zA-Z]/ig;
-    const inputValue = input.value;
-    if( inputValue.match(pattern)){
-        error.innerHTML ='';
-       popUp.setAttribute('style', 'display:block');
-    }else{    
-        error.innerHTML = '<br>Invalid input';
-        error.classList.add('errorMessage');
-        popUp.setAttribute('style', 'display:none');
+  if( inputValue.match(pattern)){
+      error.innerHTML ='';
+     popUp.setAttribute('style', 'display:block');
+     
+  }else{    
+      error.innerHTML = '<br>Invalid input';
+      error.classList.add('errorMessage');
+      popUp.setAttribute('style', 'display:none');
 
-        //After an Invalid Input
-        form.reset();
-        input.focus();
+      //After an Invalid Input
+      form.reset();
+      input.focus();
 
-    }
+  }
+
+
+
 });
+let weatherError = document.querySelector('#weather-error');
+
+//Getting DOM Element to print the weather result
+let windResult = document.querySelector('.wind-result');
+let humidityResult = document.querySelector('.humidity-result');
+let precipitationResult = document.querySelector('.precipitation-result');
+let temperatureResult = document.querySelector('.temperature-result');
+
+
+apiRequest.onreadystatechange = ()=>{
+  if(apiRequest.status == '404'){
+          
+            popUp.setAttribute('style', 'display:none');
+            weatherError.classList.add('errorMessage');      
+  return  weatherError.innerHTML = '<br>City not found';
+          
+  }
+  if(apiRequest.readyState === 4){
+    weatherError.innerHTML =  "";
+    const response = JSON.parse(apiRequest.response);
+    windResult.textContent = `${response.wind.speed}m/s`;
+    humidityResult.textContent  = `${response.main.humidity}%`;
+    precipitationResult.textContent  = `${response.weather[0].main} mm`;
+
+    // Tempearture
+let temperatureCalc = Math.floor((response.main.temp)-273);  //Default is in Kelvin subtracting 273 gives equivalent in Celsius and also approx
+    temperatureResult.textContent  = ` ${temperatureCalc}C`;
+  }
+
+}
+
+
+
 
 //Toggle Temperature Units
-
 checkbox.addEventListener('change',($event)=>{
 
   if(celsius.innerHTML == 'Celsius'){
-    celsius.innerHTML ="Fahrenheit";
+    celsius.innerHTML ="Fahrenheit"; 
   }else{
     celsius.innerHTML = "Celsius";
   }
@@ -50,6 +92,14 @@ checkbox.addEventListener('change',($event)=>{
 
 
 
+
+
+
+
+
+
+
+// HTTP End
 //Image Slider
 
 var myIndex = 0;
