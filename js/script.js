@@ -11,6 +11,7 @@ const imageSlider = document.querySelector('.image-slider');
 const celsius = document.querySelector('.Celsius');
 const checkbox = document.querySelector('#checkbox');
 const overlay = document.querySelector('.overlay');
+let weatherError = document.querySelector('#weather-error');
 
 
 
@@ -46,13 +47,15 @@ form.addEventListener('submit',($event)=>{
 
 
 });
-let weatherError = document.querySelector('#weather-error');
+
 
 //Getting DOM Element to print the weather result
 let windResult = document.querySelector('.wind-result');
 let humidityResult = document.querySelector('.humidity-result');
 let precipitationResult = document.querySelector('.precipitation-result');
 let temperatureResult = document.querySelector('.temperature-result');
+let lnglatResult = document.querySelector('.lnglat-result')
+
 
 
 apiRequest.onreadystatechange = ()=>{
@@ -68,28 +71,39 @@ apiRequest.onreadystatechange = ()=>{
     const response = JSON.parse(apiRequest.response);
     windResult.textContent = `${response.wind.speed}m/s`;
     humidityResult.textContent  = `${response.main.humidity}%`;
-    precipitationResult.textContent  = `${response.weather[0].main} mm`;
+    precipitationResult.textContent  = `${response.weather[0].main}`;
+    lnglatResult.textContent = `${response.coord.lon}, ${response.coord.lat}`;
+    temperatureResult.textContent  =`${Math.floor((response.main.temp)-273)}C`;
+    //Tempearture
+   let temperatureCalc = Math.floor((response.main.temp)-273);//Default is in Kelvin subtracting 273 gives equivalent in Celsius and also approx
+   //temperatureResult.textContent  = ` ${temperatureCalc}C`
 
-    // Tempearture
-let temperatureCalc = Math.floor((response.main.temp)-273);  //Default is in Kelvin subtracting 273 gives equivalent in Celsius and also approx
-    temperatureResult.textContent  = ` ${temperatureCalc}C`;
-  }
+//Function converting Celsisus to Fahrenheit
+const convertToFahrenheit =(fahrenheit)=>{
+  return fahrenheit = (temperatureCalc * 9/5) +32;
+ }
 
+//Function converting Celsisus to Fahrenheit
+const convertToCelsius = (celsius)=>{
+  return celsius = (convertToFahrenheit() - 32) * 5/9;
 }
 
 
-
-
-//Toggle Temperature Units
+//Toggle between Temperature Units
 checkbox.addEventListener('change',($event)=>{
-
   if(celsius.innerHTML == 'Celsius'){
-    celsius.innerHTML ="Fahrenheit"; 
+    celsius.innerHTML ="Fahrenheit:";
+    temperatureResult.textContent  = ` ${convertToFahrenheit()}F`;
+    
   }else{
-    celsius.innerHTML = "Celsius";
+    celsius.innerHTML = "Celsius"; 
+    temperatureResult.textContent  = ` ${Math.floor(convertToCelsius())}C`;
   }
 });
 
+  }
+
+}
 
 
 
