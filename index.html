@@ -24,23 +24,26 @@
             <div class="main-wrapper">
             
                 <section class="search-section">            
-                    <form action=""id="form" autocomplete="on"> 
+                    <form action="" id="form" autocomplete="on"> 
                         <label for="input" ></label>
                         <input type="text" class="search-input" id="input" placeholder="Search a location" >
                     <!--   <div class="loader"></div>-->
-                        <button class="search-button" id="searchButton">Search</button>
-                        <span id="error"></span>
+                        <button type="submit" class="search-button" id="searchButton">Search</button>
+                        <span id="error"></span>  <span id="weather-error"></span>
                     </form>  
                     <div class="pop-up">
                         <div class="weather">
                             <div class="wind-speed current-weather">
                                 <i class="fas fa-wind" title="Wind speed"></i> <hr>Wind Speed
+                                <p class="wind-result"></p>
                             </div>
                             <div class="Humidity current-weather">
                                 <i class="fa fa-cloud-rain" title="Humidity" ></i>  <hr>Humidity
+                                <p class="humidity-result"></p>
                             </div>
                             <div class="precipitation current-weather">
                                 <i class="fas fa-snowflake" title="Precipitation"></i><hr> Precipitation
+                                <p class="precipitation-result"></p>
                             </div>  
                             <div class="Temperature current-weather">
                                 <i class="fa fa-thermometer" title="Temperature"></i> <hr>Temperature <br>
@@ -49,6 +52,7 @@
                                     <input type="checkbox" id="checkbox" checked>
                                     <span class="slider round"></span>
                                 </label>
+                                <p class="temperature-result"></p>
                             </div>
                     </div>
 
