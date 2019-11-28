@@ -4,6 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- Facebook sharing Meta tag -->
+        <meta property="og:url"                content="https://haroonabdulrazaq.github.io/geo-search#weather/" />
+        <meta property="og:type"               content="Geo-search" />
+        <meta property="og:title"              content="Search for location of interest" />
+        <meta property="og:description"        content="Geo-Search is a tool that allows people to search for places and extract information such as timezone, map and local weather conditions like temperature, wind speed, humidity, and precipitation." />
+        <meta property="og:image"              content="" />
+<!-- Links to surposting resources like CSS, fonts and fontawesome -->
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/fonts.css" type="text/css" >
         <link rel="stylesheet" href="css/fontawesome-free-5.11.2-web/css/all.css">
@@ -28,10 +35,10 @@
                         <input type="text" class="search-input" id="input" placeholder="Search a location" >
                     <!--   <div class="loader"></div>-->
                         <button type="submit" class="search-button" id="searchButton">Search</button>
-                        <span id="error"></span>  <span id="weather-error"></span>
+                        <span id="error"></span>  <span id="weather-error"></span> 
                     </form>  
                     <div class="pop-up">
-                        <div class="weather">
+                        <div class="weather" id="weather" >
                             <div class="wind-speed current-weather">
                                 <i class="fas fa-wind" title="Wind speed"></i> <hr>Wind Speed
                                 <p class="wind-result"></p>
@@ -50,21 +57,26 @@
                             </div>  
                             <div class=" Postal-code current-weather">
                                 <i class="fas fa-mail-bulk" title=" Postal Code"></i><hr> Postal Code
-                                <p class=" Postalcode-result"></p>
+                                <p class="Postalcode-result"></p>
                             </div>  
                             <div class="Temperature current-weather">
-                                <i class="fa fa-thermometer" title="Temperature"></i> <hr>Temperature <br>
-                                <span class="Celsius Fahrenheit">Celsius</span>   
+                                <i class="fa fa-thermometer" title="Temperature"></i><hr>Temperature <br>
+                                <span class="Celsius Fahrenheit">Celsius:</span>   
                                 <label class="switch">
                                     <input type="checkbox" id="checkbox" checked>
                                     <span class="slider round"></span>
                                 </label>
                                 <p class="temperature-result"></p>
                             </div>
-                    </div>
+                        </div>
+                        
+                        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
 
-                    <a href="#" class="facebook"> <i class="fab fa-facebook-square" title="Share to facebook"></i>  </a>
+        <div class="fb-share-button" data-href="https://haroonabdulrazaq.github.io/geo-search/index.html#weather" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fharoonabdulrazaq.github.io%2Fgeo-search%2Findex.html%23weather&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fab fa-facebook-square" title="Share to facebook"></i></a></div>
+                        <!-- <a href="https://facebook.com/post" class="facebook"></a> <i class="fab fa-facebook-square" title="Share to facebook"></i>  </a>  -->
                     </div>
+                   
                 </section>
             </div>
             <section class="notable-landmark">
@@ -82,25 +94,29 @@
         </main>
         
     <footer class="footer">
-        <div>
+        <div class="social-media">
         <h3> Social Media </h3> 
-            <a href="#">Facebook</a>
-            <a href="#">Gmail </a>
-            <a href="#">Twitter</a>
+            <a href="https://facebook.com/Haroonabdulrazaq" target=" _blank">Facebook</a> 
+            <a href="https://gmail.com/Haroonabdulrazaq?Subject=Comment%20on%20your%20design" target="_blank">Gmail</a>
+            <a href="https://www.linkedin.com/in/haroon-abdulrazaq-817906100/" target="_blank">LinkedIn</a>
         </div>
-        <div>
-                <h3> Support</h3> 
-                <a href="#">Leave a comment</a>
-                <a href="#">View on github</a>
+        <div class="support">
+            <h3> Support</h3> 
+            <a href="#" title="coming soon!">Leave a comment</a>
+            <a href="https://github.com/Haroonabdulrazaq/geo-search" target="_blank">View on github</a>
         </div>
+
        <div> <div class="footer-3"> <a href="#header"> <i class="fas fa-arrow-up"  title="Top"></i> </a></div></div>
 
         <div class="footer-4">&copy; Powered by Facebook and  Andela</div>
     </footer>
 
+       <!-- <script async defer                          
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXb3CrioxJiqYuZ621DZsok7wuRL_a4&callback=initMap">
+       </script> -->
        <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnkEl_UehdS23iDfq3rjdWyvvSuAnKhv8&callback=initMap">
-    </script>
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqkZ6bJh4LnJTAlpjlTpnC_7f7tTz76vo&callback=initMap">
+       </script>
 
      <script src="js/script.js"></script>
 
