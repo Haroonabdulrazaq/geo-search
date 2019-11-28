@@ -11,22 +11,28 @@ Eslint using Airbnb Style guide. This guide gives detail of how to intsall and u
 # Classes and Functions 
 Classes-None
 
-Functions -
-onreadystatechange - This function makes an API call and also handles the result that is returned from the server
-convertToFahrenheit - This function converts the Temperature returned by the openweather map API into Fahrenheit
-convertToCelsius -  This function converts the Temperature returned by the openweather map API into Celsius
-carousel() - This function changes the notable landmark image in 4s It's an automatic image slider and it also includes names of the notable landmark that appears on the image during mouseover or clicks for (Mobile users)
-initMap() - This function initialize the map from google MAP API
-addMarker(location, map)  - This function includes a customized map maker this marks where a user has clicked on labeling them from A-Z
+# Functions 
+# onreadystatechange -
+This function makes an API call and also handles the result that is returned from the server
+# convertToFahrenheit - 
+This function converts the Temperature returned by the openweather map API into Fahrenheit
+# convertToCelsius - 
+This function converts the Temperature returned by the openweather map API into Celsius
+#  carousel() - 
+This function changes the notable landmark image in 4s It's an automatic image slider and it also includes names of the notable landmark that appears on the image during mouseover or clicks for (Mobile users)
+# initMap() -
+This function initialize the map from google MAP API
+# addMarker(location, map)  -
+This function includes a customized map maker this marks where a user has clicked on labeling them from A-Z
 
 
 
 # Deployment
 THe system is deployed on github pages using gh-pages you can access url:  https://haroonabdulrazaq.github.io/geo-search/
 # Built with
-HTML
-CSS
-JavaScript
+HTML,
+CSS,
+JavaScript,
 
 # Author
 Haroon Abdulrazaq
