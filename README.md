@@ -32,8 +32,8 @@ JavaScript
 Haroon Abdulrazaq
 
 # Acknowlegdment
-Anifowose Habeeb \n
-Yusuf Abdulkareem
-W3Schools
-Google API
+Anifowose Habeeb, 
+Yusuf Abdulkareem,
+W3Schools,
+Google API, 
 Openclassrooms
