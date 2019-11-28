@@ -8,7 +8,7 @@ The map section Includes a Map with customize map marker the marker is suppose t
 # Prerequisite
 Eslint using Airbnb Style guide. This guide gives detail of how to intsall and use Eslint with the specified style guide (Airbnb) https://medium.com/@Tunmise/set-up-eslint-with-airbnb-style-guide-in-5-minutes-d7b4cc5707f8 .
 
-# Classes Functions 
+# Classes and Functions 
 Classes-None
 
 Functions -
@@ -32,7 +32,7 @@ JavaScript
 Haroon Abdulrazaq
 
 # Acknowlegdment
-Anifowose Habeeb
+Anifowose Habeeb \n
 Yusuf Abdulkareem
 W3Schools
 Google API
