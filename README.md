@@ -8,6 +8,7 @@ The map section Includes a Map with customize map marker the marker is suppose t
 # Prerequisite
 Eslint using Airbnb Style guide. This guide gives detail of how to intsall and use Eslint with the specified style guide (Airbnb) https://medium.com/@Tunmise/set-up-eslint-with-airbnb-style-guide-in-5-minutes-d7b4cc5707f8 .
 
+
 # Classes and Functions 
 Classes-None
 
@@ -25,14 +26,12 @@ This function initialize the map from google MAP API
 # addMarker(location, map)  -
 This function includes a customized map maker this marks where a user has clicked on labeling them from A-Z
 
-
-
 # Deployment
 THe system is deployed on github pages using gh-pages you can access url:  https://haroonabdulrazaq.github.io/geo-search/
 # Built with
 HTML,
 CSS,
-JavaScript,
+JavaScript
 
 # Author
 Haroon Abdulrazaq
@@ -43,3 +42,4 @@ Yusuf Abdulkareem,
 W3Schools,
 Google API, 
 Openclassrooms
+
