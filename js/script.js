@@ -22,6 +22,7 @@ const apiRequest = new XMLHttpRequest();
 form.addEventListener('submit',($event)=>{
   $event.preventDefault();  //Prevent Page Refresh
   let inputValue = input.value;
+
   apiRequest.open('GET','https://api.openweathermap.org/data/2.5/weather?q=' + inputValue + '&APPID=c845f0083c427e569e8d829e46019dbc' );
   apiRequest.send();
 
