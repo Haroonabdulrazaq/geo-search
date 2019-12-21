@@ -22,6 +22,7 @@ const apiRequest = new XMLHttpRequest();
 form.addEventListener('submit',($event)=>{
   $event.preventDefault();  //Prevent Page Refresh
   let inputValue = input.value;
+
   apiRequest.open('GET','https://api.openweathermap.org/data/2.5/weather?q=' + inputValue + '&APPID=c845f0083c427e569e8d829e46019dbc' );
   apiRequest.send();
 
@@ -147,9 +148,6 @@ function carousel() {
   setTimeout(carousel, 4000); // Change image every 4 seconds
 }
 
-
-
-
 //Geocode
 //Map with Customizable Marker
 //This function doesnt allow ES6 Arrow funtion It trows error 'yd'
@@ -196,41 +194,3 @@ function geocodeAddress(geocoder, resultsMap) {
 
 
 
-
-
-
-// //Initializing function for the map and event listener for clicks on Map
-// function initMap(){
-
-// //Location using longitude and latitude
-// let Nigeria ={//globalLat,globalLng 
-//   lng:9.120123,
-//   lat:7.388412
-  
-// }
-//     //NOTE: map has been called at the top of this document
-//   map = new google.maps.Map(map,{zoom:6, center:Nigeria});
-  
-  // // This event listener calls addMarker() when the map is clicked.
-  // google.maps.event.addListener(map, 'click', function(event) {
-  //   addMarker(event.latLng, map);
-  // });
-
-  //   // Add a marker at the center of the map.
-  //   addMarker(Nigeria, map);
-
-// }
-
-// // Adds a marker to the map.
-// function addMarker(location, map) {
-//   // Add the marker at the clicked location, and add the next-available label
-//   // from the array of alphabetical characters.
-//   var marker = new google.maps.Marker({
-//     position: location,
-//     label: labels[labelIndex++ % labels.length],
-//     map: map
-//   });
-
-// }
-
-//   google.maps.event.addDomListener(window, 'load', initMap);

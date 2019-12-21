@@ -20,20 +20,21 @@
     <body>
         <header>
             <div class="header" id="header">  
-                    <img src="img/search-logo.png" alt="search-logo" class="logo-img" title="Search-logo"><h1>Geo-Search</h1>
+                <div class="logo-header">    <img src="img/search-logo.png" alt="search-logo" class="logo-img" title="Search-logo"><h1>Geo-Search</h1></div>
             </div>
         </header>
         <main> 
-            <section class="map-section">
-            <div class="map" id="map"></div>
-            </section>
             <div class="main-wrapper">
+                <section class="map-section">
+                <div class="map" id="map"></div>
+                </section>
+            
             
                 <section class="search-section">            
                     <form action="" id="form" autocomplete="on"> 
                         <label for="input" ></label>
-                        <input type="text" class="search-input" id="input" placeholder="Search a location" >
-                    <!--   <div class="loader"></div>-->
+                        <input type="text" class="search-input" id="input" placeholder="Search a location" autofocus autocomplete="true" >
+            
                         <button type="submit" class="search-button" id="searchButton">Search</button>
                         <span id="error"></span>  <span id="weather-error"></span> 
                     </form>  
@@ -60,7 +61,7 @@
                                 <p class="Postalcode-result"></p>
                             </div>  
                             <div class="Temperature current-weather">
-                                <i class="fa fa-thermometer" title="Temperature"></i><hr>Temperature <br>
+                                <i class="fa fa-thermometer" title="Temperature"></i><hr>Temperature 
                                 <span class="Celsius Fahrenheit">Celsius:</span>   
                                 <label class="switch">
                                     <input type="checkbox" id="checkbox" checked>
@@ -74,7 +75,7 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
 
         <div class="fb-share-button" data-href="https://haroonabdulrazaq.github.io/geo-search/index.html#weather" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fharoonabdulrazaq.github.io%2Fgeo-search%2Findex.html%23weather&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fab fa-facebook-square" title="Share to facebook"></i></a></div>
-                        <!-- <a href="https://facebook.com/post" class="facebook"></a> <i class="fab fa-facebook-square" title="Share to facebook"></i>  </a>  -->
+                     
                     </div>
                    
                 </section>
@@ -111,14 +112,14 @@
         <div class="footer-4">&copy; Powered by Facebook and  Andela</div>
     </footer>
 
-       <!-- <script async defer                          
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaXb3CrioxJiqYuZ621DZsok7wuRL_a4&callback=initMap">
-       </script> -->
-       <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqkZ6bJh4LnJTAlpjlTpnC_7f7tTz76vo&callback=initMap">
+       <script async defer                          
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBItzral6O5gc188-fY6YPGcvFgYUmJWbw&callback=initMap">
        </script>
+   
 
      <script src="js/script.js"></script>
+     
 
     </body>
 </html>
+
