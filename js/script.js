@@ -148,9 +148,6 @@ function carousel() {
   setTimeout(carousel, 4000); // Change image every 4 seconds
 }
 
-
-
-
 //Geocode
 //Map with Customizable Marker
 //This function doesnt allow ES6 Arrow funtion It trows error 'yd'
