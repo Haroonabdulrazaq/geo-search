@@ -86,8 +86,7 @@ font-weight: lighter;
 }
 .weather{
     display:grid;
-    /* grid-row:repeat(autofit,Minmax(100px,1fr));
-    grid-auto-columns: 2fr 2fr 2fr 2fr; */
+  
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 15px;
@@ -100,13 +99,13 @@ font-weight: lighter;
     max-width:100%;
     height:250px; 
     border-radius: 15px 0px; 
-    /* border: 2px solid red; */
+ 
 }
 .pop-up{
     display:block;
     height: 100%;
     box-shadow: -4px 6px 12px #ccc;
-    /* border: 2px solid red */
+
 }
 
 input {
@@ -118,7 +117,7 @@ input {
    text-align: center;
    font-size: 1em; 
 }
-/* 'Supermercado One', cursive; */
+
 .search-button{
     width: 4.5em;
     height: 3em;
@@ -441,7 +440,7 @@ height: 50%;
 
 
 
-/* Mobiles less than and equal to 412 screen size  */
+/* Mobile devices less than and equal to 412 screen size  */
 @media all and (max-width:412px){
 
 
@@ -524,7 +523,7 @@ input {
     padding-right:10px;
     margin:0.2em auto;
     box-sizing: border-box;
-    /* border: 2px solid green; */
+ 
   
 }
 .weather div{
@@ -534,7 +533,7 @@ input {
     border-radius: 15px 0px; 
     font-size:0.5em;
     margin: 0.2em auto;
-    /* border:2px solid red; */
+
 }
 i{
     font-size:14px;
